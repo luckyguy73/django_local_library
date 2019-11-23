@@ -1,0 +1,20 @@
+.sidebar-nav {
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+.add {
+    padding-left: 16px;
+    background: url(../img/icon-addlink.svg) 0 1px no-repeat;
+}
+
+.change {
+    padding-left: 16px;
+    background: url(../img/icon-changelink.svg) 0 1px no-repeat;
+}
+
+.delete {
+    padding-left: 16px;
+    background: url(../img/icon-deletelink.svg) 0 1px no-repeat;
+}

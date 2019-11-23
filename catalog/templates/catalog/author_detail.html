@@ -1,0 +1,26 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+    <h1>Author: {{ author.last_name }}, {{ author.first_name }}</h1>
+    <p>{{ author.date_of_birth }} - {{ author.date_of_death | default_if_none:"Still Alive" }} <br>
+        {% if user.is_staff %}
+            <a href="{% url 'author_update' pk=author.id %}" class="change">Change</a>
+            <a href="{% url 'author_delete' pk=author.id %}" class="delete">Delete</a>
+        {% endif %}
+    </p>
+
+    <div style="margin-left:20px;margin-top:20px">
+
+        <h4>Books</h4>
+
+        {% for copy in author.book_set.all %}
+
+            <hr>
+            <p><a href="{{ copy.get_absolute_url }}">{{ copy.title }}</a> ({{ copy.bookinstance_set.count }})</p>
+            <p>{{ copy.summary }}</p>
+        {% endfor %}
+
+    </div>
+
+{% endblock %}
