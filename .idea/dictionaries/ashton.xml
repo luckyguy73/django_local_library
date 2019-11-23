@@ -1,6 +1,7 @@
 <component name="ProjectDictionaryState">
   <dictionary name="ashton">
     <words>
+      <w>bookinstance</w>
       <w>collectstatic</w>
       <w>locallibrary</w>
       <w>whitenoise</w>
